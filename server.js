@@ -200,7 +200,7 @@ app.delete('/api/users/:id/notifications', async (req, res) => {
 app.get('/api/seed-spots', async (req, res) => {
   try {
     await Spot.deleteMany({}); 
-    const local = "http://localhost:5000/images/";
+    const local = "/images/";
     const premiumSpots = [
       { name: 'Lalbagh Fort', nameBN: 'লালবাগ কেল্লা', mainImage: 'https://images.pexels.com/photos/34957286/pexels-photo-34957286.jpeg', sliderImages: ['https://images.pexels.com/photos/34957286/pexels-photo-34957286.jpeg'], location: 'Old Dhaka', locationBN: 'পুরান ঢাকা', lat: 23.7198, lng: 90.3883, description: 'Lalbagh Fort is an incomplete 17th-century Mughal fort complex.', descriptionBN: '১৭শ শতকের মোগল আমলের একটি অসম্পূর্ণ দুর্গ।', bestVisitingTime: 'November to March', estimatedBudget: '500 BDT', nearbyHotels: 'Hotel 71', safetyTips: 'Beware of pickpockets.' },
       { name: "Cox's Bazar", nameBN: 'কক্সবাজার', mainImage: `${local}coxsbazar.jpg`, sliderImages: [`${local}coxsbazar.jpg`], location: 'Chittagong Division', locationBN: 'চট্টগ্রাম বিভাগ', lat: 21.4272, lng: 92.0058, description: 'The longest natural unbroken sea beach in the world.', descriptionBN: 'বিশ্বের দীর্ঘতম প্রাকৃতিক সমুদ্র সৈকত।', bestVisitingTime: 'Oct-Mar', estimatedBudget: '5000 BDT', nearbyHotels: 'Sayeman Resort', safetyTips: 'Do not swim far during high tide.' },
